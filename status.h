@@ -1,5 +1,5 @@
-#ifndef CCALC_ERRORS_H
-#define CCALC_ERRORS_H
+#ifndef CCALC_STATUS_H
+#define CCALC_STATUS_H
 
 typedef enum {
     OK,
