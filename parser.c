@@ -1,8 +1,6 @@
 #include "parser.h"
 #include "tokenizer.h"
 
-#include <stdbool.h>
-
 typedef struct {
     dynamic_array *in_tokens;
     int idx;

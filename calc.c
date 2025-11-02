@@ -1,5 +1,4 @@
 #include <math.h>
-#include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -74,13 +73,13 @@ static status read_from_stdin(char **s) {
 
 static status calculate(const char *expression, const int rpn, double *out) {
     status st = OK;
-    dynamic_array *tokens = NULL;
+    dynamic_array *tokens = nullptr;
     st = tokenize(expression, &tokens);
     if (st != OK) {
         goto end;
     }
     if (!rpn) {
-        dynamic_array *out_tokens = NULL;
+        dynamic_array *out_tokens = nullptr;
         st = convert_infix_to_postfix(tokens, &out_tokens);
         if (st != OK) {
             goto end;
@@ -97,7 +96,7 @@ end:
 int main(const int argc, const char *argv[]) {
     status st = OK;
     int rpn = false;
-    char *expression = NULL;
+    char *expression = nullptr;
 
     for (int q = 1; q < argc; q++) {
         const char *arg = argv[q];

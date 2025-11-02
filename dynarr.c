@@ -33,7 +33,7 @@ status dynarr_new(const size_t element_size, const size_t initial_capacity, dyna
     const status st = dynarr_pre_alloc(*out);
     if (st != OK) {
         free(*out);
-        *out = NULL;
+        *out = nullptr;
         return st;
     }
     return OK;
