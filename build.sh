@@ -1,1 +1,1 @@
-gcc -O2 -o calc *.c && strip calc
+gcc -O2 -o calc *.c -lm && strip calc
