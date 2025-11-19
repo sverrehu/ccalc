@@ -97,7 +97,7 @@ static status parse_primary_expression(parser_state *state) {
         if (st != OK) {
             return st;
         }
-        if (is_operator_match(state, RIGHT_PAREN)) {
+        if (!is_operator_match(state, RIGHT_PAREN)) {
             return UNMATCHED_PARENTHESIS;
         }
         next(state);
