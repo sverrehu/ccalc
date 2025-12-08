@@ -3,6 +3,13 @@
 #include "stack_calculator.h"
 #include "tokenizer.h"
 
+#ifndef M_PI
+#define M_PI 3.14159265358979323846264338327950288
+#endif
+#ifndef M_E
+#define M_E 2.71828182845904523536028747135266250
+#endif
+
 static status push(dynamic_array *stack, const double number) {
     return dynarr_append(stack, &number);
 }
