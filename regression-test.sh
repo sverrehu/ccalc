@@ -75,8 +75,12 @@ test_exact "-5" "neg(5)"
 test_exact "5" "neg(-5)"
 test_exact "0" "sin(0)"
 test_exact "1" "sin(pi/2)"
+test_exact "0" "asin(0)"
+test_exact "15708" "round(10000*asin(1))"
 test_exact "1" "cos(0)"
 test_exact "0" "round(10000*cos(pi/2))"
+test_exact "0" "acos(1)"
+test_exact "15708" "round(10000*acos(0))"
 
 if test "${NUM_FAILED}" = "0"
 then
