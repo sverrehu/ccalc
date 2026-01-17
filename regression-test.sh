@@ -55,8 +55,13 @@ test_exact "262144" "4^(3^2)"
 test_exact "262144" "4^3^2"
 test_exact "4096" "(4^3)^2"
 
-# functions
 # the use of "round(1000* ... )" is for coping with rounding errors
+
+# constants
+test_exact "31416" "round(10000*pi)"
+test_exact "27183" "round(10000*e)"
+
+# functions
 test_exact "5" "round(5)"
 test_exact "5" "round(5.4)"
 test_exact "5" "round(4.6)"
@@ -81,6 +86,19 @@ test_exact "1" "cos(0)"
 test_exact "0" "round(10000*cos(pi/2))"
 test_exact "0" "acos(1)"
 test_exact "15708" "round(10000*acos(0))"
+test_exact "0" "tan(0)"
+test_exact "0" "abs(round(10000*tan(pi)))"
+test_exact "0" "atan(0)"
+test_exact "3" "log(10^3)"
+test_exact "4" "log(10^4)"
+test_exact "3" "ln(e^3)"
+test_exact "4" "ln(e^4)"
+test_exact "9" "sqrt(81)"
+test_exact "27183" "round(10000*exp(1))"
+test_exact "200855" "round(10000*exp(3))"
+test_exact "0" "sinh(0)"
+test_exact "1" "cosh(0)"
+test_exact "0" "tanh(0)"
 
 if test "${NUM_FAILED}" = "0"
 then
